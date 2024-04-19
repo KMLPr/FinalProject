@@ -1,0 +1,15 @@
+This is the toString method for my User class that I decided to use to see where the false boolean statement is coming from even if we authenticate with the correct username and password. 
+The toString method allowed me to see that the password was returning null instead of the String password. So, in the get statement called getHashPassword I had to change the get statement
+to get password instead of hashedpassword.
+
+public String toString(){
+        String info = "Username: " + getUsername() + " and Password: " + getHashedPassword() + " and customer ID: ";
+        info += getCustomerId();
+
+        return info;
+}
+
+Updated getMethod:
+public String getHashedPassword() {
+        return userData.get("password");
+}
