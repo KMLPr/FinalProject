@@ -32,4 +32,10 @@ public class Product {
         if(cost > 0)
             this.price = cost;
     }
+    public String toString() {
+        return "\nProduct Name: " + name +
+                "\nDescription: " + description +
+                "\nPrice: $" + price +
+                "\n";
+    }
 }
