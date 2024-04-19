@@ -1,29 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-        // Create a user manager instance
-        UserManagement userManager = new UserManagement();
+        Product product1 = new Product("Laptop", "electronic", 999.99);
+        Product product2 = new Product("Smartphone", "electronic", 599.99);
+        Product product3 = new Product("Pizza", "food", 9.99);
+        Product product4 = new Product("Car", "toy", 19.99);
+        Product product5 = new Product("Car", "vehicle", 125000.00);
 
-        // Register a new user
-        userManager.registerUser("user1", "password123");
+        // Create a product catalog
+        ProductCatalog productCatalog = new ProductCatalog();
 
+        // Add products to the catalog
+        productCatalog.addProduct(product1);
+        productCatalog.addProduct(product2);
+        productCatalog.addProduct(product3);
+        productCatalog.addProduct(product4);
+        productCatalog.addProduct(product5);
 
-        // Authenticate the user
-        boolean isAuthenticated = userManager.authenticateUser("user1", "password123");
-        System.out.println("Authentication result for user1: " + isAuthenticated);
-
-        // Attempt authentication with incorrect password
-        isAuthenticated = userManager.authenticateUser("user1", "wrongpassword");
-        System.out.println("Authentication result for user1 with wrong password: " + isAuthenticated);
-
-        userManager.registerUser("user2", "5432");
-
-        isAuthenticated = userManager.authenticateUser("user2", "5432");
-        if(isAuthenticated){
-            System.out.println("Authentication successful!");
-        }
-        else{
-            System.out.println("Incorrect sign in");
-        }
-
+        System.out.println("All products");
+        System.out.println(productCatalog.getAllProducts());
+        System.out.println("Test search by name: ");
+        System.out.println(productCatalog.searchByName("Car"));
+        System.out.println("Test search by description: ");
+        System.out.println(productCatalog.searchByDescription("electronic"));
+        System.out.println("Test by price: ");
+        System.out.println(productCatalog.searchByPriceRange(10.00, 1000.00));
     }
 }
