@@ -26,3 +26,63 @@ public class Main {
         System.out.println(productCatalog.searchByPriceRange(10.00, 1000.00));
     }
 }
+
+*/
+Current output: 
+All products
+[
+Product Name: Laptop
+Description: electronic
+Price: $999.99
+, 
+Product Name: Smartphone
+Description: electronic
+Price: $599.99
+, 
+Product Name: Pizza
+Description: food
+Price: $9.99
+, 
+Product Name: Car
+Description: toy
+Price: $19.99
+, 
+Product Name: Car
+Description: vehicle
+Price: $125000.0
+]
+Test search by name: 
+[
+Product Name: Car
+Description: toy
+Price: $19.99
+, 
+Product Name: Car
+Description: vehicle
+Price: $125000.0
+]
+Test search by description: 
+[
+Product Name: Laptop
+Description: electronic
+Price: $999.99
+, 
+Product Name: Smartphone
+Description: electronic
+Price: $599.99
+]
+Test by price: 
+[
+Product Name: Laptop
+Description: electronic
+Price: $999.99
+, 
+Product Name: Smartphone
+Description: electronic
+Price: $599.99
+, 
+Product Name: Car
+Description: toy
+Price: $19.99
+]
+/*
