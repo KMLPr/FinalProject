@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.HashMap; 
 public class UserManagement {
     private HashMap<String, User> userMap;
     private HashMap<String, String> usernameToCustomerIdMap; // Map username to customer ID
