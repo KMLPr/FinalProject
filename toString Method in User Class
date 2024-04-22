@@ -12,4 +12,4 @@ public String toString(){
 Updated getMethod:
 public String getHashedPassword() {
         return userData.get("password");
-}
+} 
